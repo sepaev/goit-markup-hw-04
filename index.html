@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия - goit-markup-hw-03</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container">
+            <a class="logo-link-header" href="./index.html"><span class="logo-main">Web</span>Studio</a>
+            <nav>
+                <ul class="nav">
+                    <li><a class="nav-link current" href="./index.html">Студия</a></li>
+                    <li><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
+                    <li><a class="nav-link" href="./contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="contacts-header">
+                <li><a class="contact-link contact-head" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li><a class="contact-link contact-head" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--/* Герой */-->
+        <section class="hero">
+            <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
+            <a class="main-button" href="">Заказать услугу</a>
+        </section>
+        <div class="container studio-container">
+            <!--/* Особенности */-->
+            <section class="features-section">
+                <h2 class="visually-hidden">Особенности</h2>
+                <ul class="features-content">
+                    <li>
+                        <h3 class="features-title">Внимание к деталям</h3>
+                        <p class="features-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                    </li>
+                    <li>
+                        <h3 class="features-title">Пунктуальность</h3>
+                        <p class="features-text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                    </li>
+                    <li>
+                        <h3 class="features-title">Планирование</h3>
+                        <p class="features-text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                    </li>
+                    <li>
+                        <h3 class="features-title">Современные технологии</h3>
+                        <p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                    </li>
+                </ul>
+            </section>
+            <!--/* Чем мы занимаемся */-->
+            <section class="work-section">
+                <h2 class="section-title">Чем мы занимаемся</h2>
+                <ul class="work-content">
+                    <li>
+                        <img src="./images/working01.jpg" alt="Чем мы занимаемся" width="370">
+                    </li>
+                    <li>
+                        <img src="./images/working02.jpg" alt="Чем мы занимаемся" width="370">
+                    </li>
+                    <li>
+                        <img src="./images/working03.jpg" alt="Чем мы занимаемся" width="370">
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!--/* Наша команда */-->
+        <section class="team-section">
+            <h2 class="section-title">Наша команда</h2>
+            <ul class="team-set">
+                <li class="team-item">
+                    <div class="team-thumb">
+                         <img src="./images/member01.jpg" alt="Product Designer" width="270">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-member">Игорь Демьяненк</h3>
+                        <p class="team-profession">Product Designer</p>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <div class="team-thumb">
+                         <img src="./images/member02.jpg" alt="Frontend Developer" width="270">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-member">Ольга Репина</h3>
+                        <p class="team-profession">Frontend Developer</p>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <div class="team-thumb">
+                        <img src="./images/member03.jpg" alt="Marketing" width="270">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-member">Николай Тарасов</h3>
+                        <p class="team-profession">Marketing</p>
+                    </div>
+                </li>
+
+                <li class="team-item">
+                    <div class="team-thumb">
+                        <img src="./images/member04.jpg" alt="UI Designer" width="270">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-member">Михаил Ермаков</h3>
+                        <p class="team-profession">UI Designer</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <!--/* Подвал */-->
+        <div class="container">
+            <a class="logo-link-footer" href="./index.html"><span class="logo-main">Web</span>Studio</a>
+            <h3 class="visually-hidden">Контакты</h3>
+            <address class="address">
+                <ul class="contacts-footer">
+                    <!-- не разобрался как сделать padding-bottom: 9px; в контактах, никак не реагирует-->
+                    <li><a class="contact-link map" href="https://goo.gl/maps/ZJ7xZnVnSobTsskUA">г. Киев, пр-т Леси
+                            Украинки,
+                            26</a></li>
+                    <li><a class="contact-link contact-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="contact-link contact-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                </ul>
+            </address>
+            <div class="made">
+                <hr class="divider">
+                <span>2021 | Made by Sepaev. GoIt Student. Fe Core 33 Online. ReactTeam &#174;</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
