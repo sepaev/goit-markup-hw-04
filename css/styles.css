@@ -13,6 +13,10 @@
   --border-color: #ececec; /* цвет границы #ECECEC */
   --banner-color: #2f303a; /* цвет фона за героем #2F303A */
   --border-color-outline: #eee; /* цвет границы #EEEEEE */
+  --social-passive-color: #afb1b8; /*цвет кнопки социальной сети неактивный #AFB1B8 */
+  --social-active-color: #fff; /*цвет кнопки социальной сети активный #FFFFFF */
+  --social-bg-active-color: #2196f3; /*цвет фона социальной сети активный #2196F3 */
+  --social-bg-passive-color: #fff; /*цвет фона социальной сети неактивный #FFFFFF */
   --standart-30px: 30px;
   --standart-50px: 50px;
   --standart-94px: 94px;
@@ -139,13 +143,27 @@ body {
 }
 
 .contact-head {
-  margin-left: var(--standart-50px);
+  margin-right: var(--standart-50px);
   color: var(--passive-link-color);
+}
+
+.contacts-header li:nth-last-child() {
+  margin-right: 0px;
+  color: gold;
+  outline: red;
 }
 
 .contact-link {
   font-style: normal; /*убираю курсив*/
   letter-spacing: 0.03em;
+}
+
+.mail::before {
+  display: inline-block;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: red;
 }
 
 .nav-link:hover,
@@ -203,9 +221,10 @@ footer .container {
 }
 
 .made {
-  margin: var(--standart-30px) auto;
+  margin: auto;
   display: inline-flexbox;
   text-align: center;
+  color: var(--secondary-text-color);
 }
 
 /* 
@@ -229,7 +248,8 @@ main {
 /* геройчик */
 .hero {
   padding-top: 200px;
-  background: var(--banner-color);
+  background-color: #c4c4c4;
+  background-image: url('../images/main-bg.jpg');
   height: 600px;
   width: 100%;
 }
@@ -246,12 +266,13 @@ main {
 }
 
 .main-button {
+  height: 50px;
   display: block;
   background: var(--active-link-color);
   color: var(--white-color);
   font-weight: bold;
   font-size: 16px;
-  line-height: 2.375;
+  line-height: 1.875;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 4px;
@@ -328,6 +349,7 @@ main {
   background: var(--grey-color);
   padding: var(--standart-94px) 215px;
 }
+
 .team-section .section-title {
   margin-bottom: 50px;
 }
@@ -360,7 +382,6 @@ main {
   line-height: 19px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  /* margin-top: var(--standart-30px); */
   font-weight: 500;
 }
 
@@ -370,7 +391,39 @@ main {
   letter-spacing: 0.03em;
   margin-top: 10px;
   color: var(--secondary-text-color);
-  /* margin-bottom: var(--standart-30px); */
+}
+
+.social {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+}
+
+.social-button {
+  padding: 0;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--social-passive-color);
+  background-color: var(--social-bg-passive-color);
+  align-items: flex-start;
+  display: inline-block;
+  text-align: center;
+}
+
+.social-button:hover {
+  background-color: var(--social-bg-active-color);
+  color: var(--social-active-color);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: currentColor;
+  text-align: center;
+  margin: 12px;
 }
 
 /* 
