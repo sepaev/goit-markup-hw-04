@@ -46,7 +46,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 ul,
@@ -147,11 +147,11 @@ body {
   color: var(--passive-link-color);
 }
 
-.contacts-header li:nth-last-child() {
+/* .contacts-header li:nth-last-child() {
   margin-right: 0px;
   color: gold;
   outline: red;
-}
+} */
 
 .contact-link {
   font-style: normal; /*убираю курсив*/
@@ -249,7 +249,13 @@ main {
 .hero {
   padding-top: 200px;
   background-color: #c4c4c4;
-  background-image: url('../images/main-bg.jpg');
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/main-bg.jpg');
+  background-size: contain, contain;
   height: 600px;
   width: 100%;
 }
