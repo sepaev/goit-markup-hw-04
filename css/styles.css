@@ -3,20 +3,30 @@
   --secondary-text-color: #757575; /* основной цвет текста #757575 */
   --main-background-color: #e5e5e5; /* основной цвет фона #E5E5E5 */
   --secondary-background-color: #2f303a; /* дополнительный цвет фона #2F303A */
+
   --active-link-color: #2196f3; /* цвет активной ссылки #2196F3 */
   --passive-link-color: #757575; /* цвет пассивной ссылки #757575 */
   --passive-link-color-footer: rgba(255, 255, 255, 0.6);
   --logo-main-color: #2196f3; /* лого цвет основной #2196F3 */
   --black-color: #000000; /* черный цвет #000000 */
   --white-color: #ffffff; /* белый цвет #FFFFFF */
-  --grey-color: #f5f4fa; /* серый цвет #F5F4FA */
+  --light-grey-color: #f5f4fa; /* светло-серый цвет #F5F4FA */
   --border-color: #ececec; /* цвет границы #ECECEC */
   --banner-color: #2f303a; /* цвет фона за героем #2F303A */
   --border-color-outline: #eee; /* цвет границы #EEEEEE */
-  --social-passive-color: #afb1b8; /*цвет кнопки социальной сети неактивный #AFB1B8 */
+  --grey-color: #afb1b8; /*серый цвет #AFB1B8 */
+  --passive-background-color: #afb1b8; /*цвет кнопки неактивный #AFB1B8 */
+  --social-passive-footer-color: #fff; /*цвет кнопки социальной сети в футере неактивный #FFFFFF */
   --social-active-color: #fff; /*цвет кнопки социальной сети активный #FFFFFF */
   --social-bg-active-color: #2196f3; /*цвет фона социальной сети активный #2196F3 */
-  --social-bg-passive-color: #fff; /*цвет фона социальной сети неактивный #FFFFFF */
+  --social-background-main-color: #fff; /*цвет фона социальной сети неактивный #FFFFFF */
+  --social-background-footer-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /*цвет фона социальной сети footer неактивный rgba(255, 255, 255, 0.1) */
+
   --standart-30px: 30px;
   --standart-50px: 50px;
   --standart-94px: 94px;
@@ -193,7 +203,7 @@ footer {
 footer .container {
   padding: 60px 215px;
   margin: 0px;
-  display: block;
+  display: flex;
   height: 100%;
 }
 
@@ -220,6 +230,24 @@ footer .container {
   display: block;
   color: var(--white-color);
   padding-bottom: 9px;
+}
+
+.social-container {
+  margin: 12px 0px 20px 70px;
+}
+
+.social.footer {
+  width: 206px;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.social-button-footer {
+  color: var(--social-passive-footer-color);
+  background-color: var(--social-background-footer-color);
+}
+
+.social-container-title {
+  color: var(--white-color);
 }
 
 .divider {
@@ -307,7 +335,7 @@ main {
   width: 100%;
   height: 120px;
   color: var(--black-color);
-  background: var(--grey-color);
+  background: var(--light-grey-color);
   border-radius: 4px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -340,8 +368,8 @@ main {
   margin-right: var(--standart-30px);
 }
 
-.features-title {
-  color: var(--main-text-color);
+.features-title,
+.social-container-title {
   text-transform: uppercase;
   font-style: normal;
   font-weight: bold;
@@ -349,6 +377,10 @@ main {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-align: left;
+}
+
+.features-title {
+  color: var(--main-text-color);
 }
 
 .features-text {
@@ -384,7 +416,7 @@ main {
 /* Наша команда */
 
 .team-section {
-  background: var(--grey-color);
+  background: var(--light-grey-color);
   padding: var(--standart-94px) 215px;
 }
 
@@ -438,19 +470,26 @@ main {
 }
 
 .social-button {
+  color: var(--passive-background-color);
+  background-color: var(--social-background-main-color);
+}
+
+.social-button,
+.social-button-footer {
   padding: 0;
   border: 0;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--social-passive-color);
-  background-color: var(--social-bg-passive-color);
+
+  cursor: pointer;
   align-items: flex-start;
   display: inline-block;
   text-align: center;
 }
 
-.social-button:hover {
+.social-button:hover,
+.social-button-footer:hover {
   background-color: var(--social-bg-active-color);
   color: var(--social-active-color);
 }
@@ -458,7 +497,7 @@ main {
 .button-icon {
   width: 20px;
   height: 20px;
-  cursor: pointer;
+
   fill: currentColor;
   text-align: center;
   margin: 12px;
@@ -491,6 +530,7 @@ main {
 
 .clients-item {
   flex-basis: calc(100% / 6 - var(--standart-30px));
+  min-width: 150px;
   margin-left: var(--standart-30px);
   margin-top: var(--standart-30px);
   background: var(--white-color);
@@ -498,7 +538,7 @@ main {
 }
 
 .clients-thumb {
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--grey-color);
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
@@ -507,7 +547,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--social-passive-color);
+  color: var(--passive-background-color);
 }
 
 .clients-thumb:hover {
@@ -606,9 +646,13 @@ main {
 
 .google-map {
   display: block;
+  width: 1200px;
   height: 450px;
   border: 0;
   margin: var(--standart-50px) auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 40%;
 }
 
 .contacts-section {
