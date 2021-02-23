@@ -87,7 +87,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: auto;
 }
 
 body {
@@ -96,14 +95,23 @@ body {
   font-size: 14px;
   line-height: 1.14;
   max-width: 1600px;
-  margin: 0;
+  margin: auto;
+  background: var(--main-background-color);
 }
 
 .container {
   width: auto;
-  margin: 0px 200px var(--standart-94px) 200px;
-  padding: 0 15px;
+  padding: var(--standart-94px) 215px;
   display: flex;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* лого */
@@ -128,6 +136,7 @@ body {
 
 .header {
   border: 1px solid var(--border-color);
+  background: var(--white-color);
 }
 
 .header .container {
@@ -269,6 +278,7 @@ footer .container {
 
 main {
   text-align: center;
+  background: var(--white-color);
 }
 
 .section-title {
@@ -281,7 +291,7 @@ main {
 
 /* геройчик */
 .hero {
-  padding-top: 200px;
+  padding: 200px;
   background-color: #c4c4c4;
   background-image: linear-gradient(
       to right,
@@ -290,7 +300,7 @@ main {
     ),
     url('../images/main-bg.jpg');
   background-size: contain, contain;
-  height: 600px;
+  min-height: 600px;
   width: 100%;
 }
 
@@ -303,6 +313,7 @@ main {
   width: 696px;
   height: 120px;
   margin: auto;
+  margin-bottom: var(--standart-30px);
 }
 
 .main-button {
@@ -317,7 +328,7 @@ main {
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 4px;
   width: 200px;
-  margin: var(--standart-30px) auto;
+  margin: auto;
 }
 
 .main-button:hover {
@@ -337,27 +348,25 @@ main {
   color: var(--black-color);
   background: var(--light-grey-color);
   border-radius: 4px;
-  margin-bottom: 30px;
   cursor: pointer;
 }
 
-.features-icon-container:hover {
-  background-color: var(--active-link-color);
-  color: white;
-}
+/* .features-icon-container:hover { */
+/* background-color: var(--active-link-color); */
+/* color: white; */
+/* } */
 
 .features-icon {
   width: 70px;
   height: 70px;
   cursor: pointer;
   fill: currentColor;
-  text-align: center;
   margin: 25px;
 }
 
 .features-content {
   display: flex;
-  padding: var(--standart-94px) 0px;
+  padding-bottom: var(--standart-94px);
 }
 
 .features-content li {
@@ -381,6 +390,8 @@ main {
 
 .features-title {
   color: var(--main-text-color);
+  padding-top: var(--standart-30px);
+  padding-bottom: 10px;
 }
 
 .features-text {
@@ -392,21 +403,14 @@ main {
 }
 
 /* Чем мы занимаемся */
-
-.work-section {
-  padding-bottom: var(--standart-94px);
-}
-
 .work-content {
   display: inline-flex;
+  line-height: 0;
+  vertical-align: bottom;
 }
 
 .work-content li {
   margin-top: var(--standart-50px);
-}
-
-.work-content li img {
-  vertical-align: bottom;
 }
 
 .work-content li:not(:last-child) {
@@ -420,32 +424,28 @@ main {
   padding: var(--standart-94px) 215px;
 }
 
-.team-section .section-title {
-  margin-bottom: 50px;
-}
-
 .team-set {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--standart-30px));
-  margin-top: calc(-1 * var(--standart-30px));
 }
 
 .team-item {
-  flex-basis: calc(100% / 4 - var(--standart-30px));
-  margin-left: var(--standart-30px);
-  margin-top: var(--standart-30px);
+  margin-top: var(--standart-50px);
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item:not(:last-child) {
+  margin-right: var(--standart-30px);
+}
+
 .team-content {
-  margin: var(--standart-30px);
+  padding: var(--standart-30px);
 }
 
 .team-member {
@@ -454,20 +454,22 @@ main {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   font-weight: 500;
+  padding-bottom: 10px;
 }
 
 .team-profession {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-top: 10px;
+  padding-bottom: 16px;
   color: var(--secondary-text-color);
 }
 
 .social {
-  display: flex;
-  margin-top: 16px;
+  display: inline-flex;
   justify-content: space-between;
+  width: 100%;
+  line-height: 0;
 }
 
 .social-button {
@@ -498,7 +500,6 @@ main {
 .button-icon {
   width: 20px;
   height: 20px;
-
   fill: currentColor;
   text-align: center;
   margin: 12px;
@@ -506,13 +507,12 @@ main {
 
 /* Постоянные клиенты */
 .clients-section {
+  display: block;
   width: 100%;
 }
 
 .clients-title {
   display: block;
-  height: 42px;
-  margin: var(--standart-94px) auto var(--standart-50px);
   font-weight: bold;
   font-size: 36px;
   line-height: 1.167;
@@ -525,23 +525,16 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--standart-30px));
-  margin-top: calc(-1 * var(--standart-30px));
 }
 
 .clients-item {
-  flex-basis: calc(100% / 6 - var(--standart-30px));
-  min-width: 150px;
-  margin-left: var(--standart-30px);
-  margin-top: var(--standart-30px);
+  margin-top: var(--standart-50px);
   background: var(--white-color);
-  outline: 1px solid var(--border-color-outline);
-}
-
-.clients-thumb {
   border: 1px solid var(--grey-color);
   box-sizing: border-box;
   border-radius: 4px;
+  max-width: 210px;
+  min-width: 170px;
   cursor: pointer;
   fill: currentColor;
   height: 90px;
@@ -551,7 +544,11 @@ main {
   color: var(--passive-background-color);
 }
 
-.clients-thumb:hover {
+.clients-item:not(:last-child) {
+  margin-right: var(--standart-30px);
+}
+
+.clients-item:hover {
   color: var(--active-link-color);
 }
 
@@ -571,7 +568,7 @@ main {
 
 .filters-button {
   margin: 0px 4px var(--standart-50px) 4px;
-  background: var(--grey-color);
+  background: var(--light-grey-color);
   color: var(--main-text-color);
   font-style: normal;
   font-weight: 500;
@@ -580,10 +577,18 @@ main {
   border-radius: 4px;
   letter-spacing: 0.03em;
   height: 38px;
-  padding: 6px 22px 6px 22px;
+  padding: 6px 22px;
   font-family: inherit;
   cursor: pointer;
-  border: solid var(--grey-color);
+}
+
+.portfolio-thumb {
+  background-color: rgba(33, 150, 243, 0.9);
+  cursor: pointer;
+}
+
+.portfolio-thumb img:hover {
+  opacity: 0.1;
 }
 
 .filters-button:hover {
@@ -591,8 +596,6 @@ main {
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border: solid transparent;
 }
 
 .portfolio-set {
@@ -606,7 +609,7 @@ main {
 }
 
 .portfolio-content {
-  margin: 20px 24px;
+  padding: 20px 24px;
   display: block;
 }
 
@@ -627,10 +630,10 @@ main {
   line-height: 2;
   color: var(--main-text-color);
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .portfolio-text {
-  margin-top: 4px;
   display: block;
   font-size: 16px;
   font-weight: normal;
@@ -647,8 +650,8 @@ main {
 
 .google-map {
   display: block;
-  width: 1200px;
-  height: 450px;
+  width: 80%;
+  height: 600px;
   border: 0;
   margin: var(--standart-50px) auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -658,6 +661,7 @@ main {
 
 .contacts-section {
   display: block;
+  width: 100%;
   text-align: center;
   margin: var(--standart-94px) auto;
 }
