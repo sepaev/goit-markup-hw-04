@@ -140,10 +140,9 @@ button {
 }
 
 .header .container {
-  min-height: 80px;
   align-items: center;
   margin-bottom: 0px;
-  padding: 0px 215px;
+  padding: 24px 215px 25px;
   margin: 0px;
 }
 
@@ -219,7 +218,7 @@ footer .container {
 .logo-link-footer {
   display: block;
   color: var(--white-color);
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   line-height: 1.19;
 }
 
@@ -241,10 +240,6 @@ footer .container {
   padding-bottom: 9px;
 }
 
-.social-container {
-  margin: 12px 0px 20px 70px;
-}
-
 .social.footer {
   width: 206px;
   color: rgba(255, 255, 255, 0.1);
@@ -255,8 +250,14 @@ footer .container {
   background-color: var(--social-background-footer-color);
 }
 
+.social-container {
+  padding-top: 12px;
+  padding-left: 70px;
+}
+
 .social-container-title {
   color: var(--white-color);
+  padding-bottom: 20px;
 }
 
 .divider {
@@ -558,10 +559,6 @@ main {
 ------------ПОРТФОЛИО-----------------
  */
 
-.section-portfolio {
-  margin-top: var(--standart-94px);
-}
-
 .filters {
   display: inline-flex;
 }
@@ -630,7 +627,7 @@ main {
   line-height: 2;
   color: var(--main-text-color);
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .portfolio-text {
@@ -653,7 +650,7 @@ main {
   width: 80%;
   height: 600px;
   border: 0;
-  margin: var(--standart-50px) auto;
+  margin: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 40%;
@@ -663,5 +660,8 @@ main {
   display: block;
   width: 100%;
   text-align: center;
-  margin: var(--standart-94px) auto;
+  background-color: var(--white-color);
+}
+.contacts-section .section-title {
+  padding-bottom: var(--standart-50px);
 }
