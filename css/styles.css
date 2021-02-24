@@ -580,12 +580,27 @@ main {
 }
 
 .portfolio-thumb {
-  background-color: rgba(33, 150, 243, 0.9);
   cursor: pointer;
+  position: relative;
 }
 
-.portfolio-thumb img:hover {
-  opacity: 0.1;
+.portfolio-description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  color: var(--white-color);
+  opacity: 0;
+}
+
+.portfolio-description:hover {
+  opacity: 1;
 }
 
 .filters-button:hover {
