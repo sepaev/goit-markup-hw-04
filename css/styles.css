@@ -597,6 +597,7 @@ main {
   padding: 63px 24px;
   color: var(--white-color);
   opacity: 0;
+  transition: 500ms opacity linear;
 }
 
 .portfolio-description:hover {
